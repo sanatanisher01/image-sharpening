@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Virtual Environment
+myenv/
+venv/
+env/
+
+# Model files (too large for GitHub)
+*.pth
+BSRGAN.pth
+
+# Data directories (too large)
+data/train/
+data/val/
+data/test/
+
+# Results and logs
+logs/
+results/
+*.png
+*.jpg
+*.jpeg
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
