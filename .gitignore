@@ -11,8 +11,7 @@ myenv/
 venv/
 env/
 
-# Model files (too large for GitHub)
-*.pth
+# Large model files
 BSRGAN.pth
 
 # Data directories (too large)

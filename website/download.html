@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download - AI Image Sharpening</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <i class="fas fa-microchip"></i>
+                <span>Intel Unnati</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#downloads">Downloads</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="downloads" class="downloads">
+        <div class="container">
+            <h2 class="section-title">Download Project</h2>
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Complete Project</h3>
+                    <p>Download the entire AI Image Sharpening project with all source code, models, and documentation.</p>
+                    <a href="image-sharpening-project.zip" class="btn btn-primary" download>
+                        <i class="fas fa-download"></i>
+                        Download ZIP (50MB)
+                    </a>
+                </div>
+                <div class="download-card">
+                    <div class="download-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub Repository</h3>
+                    <p>Access the latest version of the project on GitHub with version control and issue tracking.</p>
+                    <a href="https://github.com/sanatanisher01/image-sharpening" class="btn btn-secondary">
+                        <i class="fab fa-github"></i>
+                        View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Create and download zip file
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadBtn = document.querySelector('a[download]');
+            downloadBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Creating project ZIP file... This may take a moment.');
+                // In a real implementation, this would trigger server-side zip creation
+                window.location.href = 'https://github.com/sanatanisher01/image-sharpening/archive/refs/heads/main.zip';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Image Sharpening - Intel Unnati</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="three.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-brand">
+                <i class="fas fa-microchip"></i>
+                <span>Intel Unnati</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="documentation.html">Docs</a></li>
+                <li><a href="#team">Team</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg">
+            <canvas id="three-canvas"></canvas>
+            <canvas id="particle-canvas" style="position: absolute; top: 0; left: 0; pointer-events: none;"></canvas>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">AI Image Sharpening</h1>
+            <p class="hero-subtitle">Real-time video enhancement for conferencing using Knowledge Distillation</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">88.82%</span>
+                    <span class="stat-label">SSIM Score</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">31.4</span>
+                    <span class="stat-label">FPS</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">334K</span>
+                    <span class="stat-label">Parameters</span>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <a href="#demo" class="btn btn-primary">
+                    <i class="fas fa-play"></i>
+                    Try Demo
+                </a>
+                <a href="https://github.com/sanatanisher01/image-sharpening" class="btn btn-secondary">
+                    <i class="fab fa-github"></i>
+                    View Code
+                </a>
+                <a href="project-files-complete.zip" class="btn btn-primary" download>
+                    <i class="fas fa-download"></i>
+                    Download Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About the Project</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <h3>Real-time Image Sharpening for Video Conferencing</h3>
+                    <p>Our AI-powered system enhances video quality in real-time using knowledge distillation from BSRGAN teacher model to an ultra-lightweight student model.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Knowledge Distillation</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Real-time Processing</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-video"></i>
+                            <span>Video Conferencing Ready</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="model-architecture">
+                        <div class="model-box teacher">
+                            <h4>Teacher Model</h4>
+                            <p>BSRGAN</p>
+                            <span>16.7M params</span>
+                        </div>
+                        <div class="arrow">
+                            <i class="fas fa-arrow-right"></i>
+                            <span>Knowledge Distillation</span>
+                        </div>
+                        <div class="model-box student">
+                            <h4>Student Model</h4>
+                            <p>Lightweight CNN</p>
+                            <span>334K params</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Ultra-Fast Performance</h3>
+                    <p>Achieves 31.4 FPS at 480p resolution, perfect for real-time video conferencing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>High Quality Enhancement</h3>
+                    <p>88.82% SSIM score ensuring excellent visual quality and sharpness.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-feather"></i>
+                    </div>
+                    <h3>Lightweight Model</h3>
+                    <p>Only 334K parameters - 99% reduction from teacher model.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plug"></i>
+                    </div>
+                    <h3>Easy Integration</h3>
+                    <p>Direct integration with Google Meet, Zoom, and other platforms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Proven Results</h3>
+                    <p>Evaluation on 100+ images with 4.2/5.0 Mean Opinion Score.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Open Source</h3>
+                    <p>Complete codebase available on GitHub with documentation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="demo-bg">
+            <canvas id="demo-canvas"></canvas>
+        </div>
+        <div class="container">
+            <h2 class="section-title">How to Use</h2>
+            <div class="demo-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Clone Repository</h3>
+                        <div class="code-block">
+                            <code>git clone https://github.com/sanatanisher01/image-sharpening.git</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Install Dependencies</h3>
+                        <div class="code-block">
+                            <code>pip install -r requirements.txt</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Run AI Camera</h3>
+                        <div class="code-block">
+                            <code>python camera.py</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Use in Video Calls</h3>
+                        <p>Select "Python Virtual Camera" in your video conferencing app</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="team-bg">
+            <canvas id="team-canvas"></canvas>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Aryan Gupta</h3>
+                    <p>Lead Developer</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Devang Mittal</h3>
+                    <p>AI Researcher</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Ayush Agrawal (19)</h3>
+                    <p>ML Engineer</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Arush Saxena</h3>
+                    <p>Backend Developer</p>
+                </div>
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>Ayush Agrawal</h3>
+                    <p>Frontend Developer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-microchip"></i>
+                    <span>Intel Unnati</span>
+                    <p>AI Image Sharpening Project</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Project</h4>
+                        <a href="https://github.com/sanatanisher01/image-sharpening">GitHub</a>
+                        <a href="documentation.html">Documentation</a>
+                        <a href="#features">Features</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Team Members</h4>
+                        <span>Aryan Gupta</span>
+                        <span>Devang Mittal</span>
+                        <span>Ayush Agrawal (19)</span>
+                        <span>Arush Saxena</span>
+                        <span>Ayush Agrawal</span>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Intel Unnati - AI Image Sharpening Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="particles.js"></script>
+    <script src="enhanced-effects.js"></script>
+</body>
+</html>
